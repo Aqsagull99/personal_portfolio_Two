@@ -28,9 +28,9 @@ function about() {
       viewport={{ once: true }}
       transition={{ delay: 0.2, duration: 0.6 }}
     >
-      I'm Aqsa, a passionate Web Developer with a strong background in building
+      I&#39;sm Aqsa, a passionate Web Developer with a strong background in building
       modern, responsive, and interactive user interfaces. I love blending
-      creativity with code to craft seamless user experiences. I'm driven by
+      creativity with code to craft seamless user experiences. I&#39;m driven by
       curiosity and always eager to explore new technologies and improve my
       craft.
     </motion.p>
@@ -69,3 +69,4 @@ function about() {
 }
 
 export default about
+

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Code, Paintbrush, Settings2 ,BrainCircuit, Bot} from "lucide-react";
+
 
 export default function Header() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -69,7 +69,7 @@ export default function Header() {
           transition={{ duration: 1 }}
         >
           <h2 className="text-5xl font-bold mb-4 drop-shadow-md">
-            Hi, I'm Aqsa
+            Hi, I&#39;m Aqsa
           </h2>
           <p className="text-xl text-gray-200 drop-shadow-sm">
             Creative Web Developer | UI/UX Enthusiast | Tech Explorer

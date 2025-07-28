@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
       reply,
       status: 'success'
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Gemini Chat Error:', error);
     return NextResponse.json(
       {
@@ -47,3 +47,7 @@ export async function POST(req: NextRequest) {
     );
   }
 }
+
+
+
+

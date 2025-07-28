@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import Header_Two from '../components/Header_Two';
+import Image from 'next/image';
 
 function Services() {
   return (
@@ -36,9 +37,11 @@ function Services() {
           </p>
         </div>
         <div className="md:w-1/2 mt-6 md:mt-0 text-center">
-          <img
+          <Image
             src="/undraw_web-development_0wdh.svg"
             alt="Web Development"
+            width={80}
+            height={80}
             className="w-60 mx-auto hover:scale-105 transition duration-300"
           />
         </div>
@@ -59,9 +62,11 @@ function Services() {
           </p>
         </div>
         <div className="md:w-1/2 mt-6 md:mt-0 text-center">
-          <img
+          <Image
             src="/undraw_user-flow_d1ya.svg"
             alt="UI UX"
+            width={80}
+            height={80}
             className="w-60 mx-auto hover:scale-105 transition duration-300"
           />
         </div>
@@ -82,9 +87,11 @@ function Services() {
           </p>
         </div>
         <div className="md:w-1/2 mt-6 md:mt-0 text-center">
-          <img
+          <Image
             src="/undraw_responsive_csbt.svg"
             alt="Responsive Design"
+            width={80}
+            height={80}
             className="w-60 mx-auto hover:scale-105 transition duration-300"
           />
         </div>
@@ -97,3 +104,5 @@ function Services() {
 }
 
 export default Services
+
+

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Code, Paintbrush, Settings2, BrainCircuit, Bot } from "lucide-react";
+
 import { motion } from "framer-motion";
 
 export default function Header_Two() {

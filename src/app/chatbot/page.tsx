@@ -38,11 +38,13 @@ export default function ChatbotPage() {
       const botMessage = { type: 'bot' as const, text: data.reply };
       setMessages((prev) => [...prev, botMessage]);
 
-    } catch (error: any) {
+    } catch (error: unknown) {
       // Add error message
       const errorMessage = { 
         type: 'error' as const, 
-        text: error.message || 'Error connecting to AI service'
+        text: (error && typeof error === 'object' && 'message' in error && typeof (error as { message?: unknown }).message === 'string')
+          ? (error as { message: string }).message
+          : 'Error connecting to AI service'
       };
       setMessages((prev) => [...prev, errorMessage]);
 
@@ -79,7 +81,7 @@ export default function ChatbotPage() {
         <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-6">
           <div className="flex items-center space-x-3">
             <BsRobot className="text-white text-2xl" />
-            <h1 className="text-xl font-bold text-white">Aqsa's AI Assistant</h1>
+            <h1 className="text-xl font-bold text-white">Aqsa&#39;s AI Assistant</h1>
           </div>
           <p className="text-purple-100 text-sm mt-1">How can I help you today?</p>
         </div>
@@ -95,7 +97,7 @@ export default function ChatbotPage() {
               >
                 <FiMessageSquare className="text-4xl mb-3" />
                 <p>Start a conversation with the AI</p>
-                <p className="text-sm mt-1">Ask anything you'd like to know</p>
+                <p className="text-sm mt-1">Ask anything you&#39;d like to know</p>
               </motion.div>
             )}
 

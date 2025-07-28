@@ -11,24 +11,24 @@ export default function Footer() {
 
         <div className="flex space-x-4 items-center">
           {/* External links: use <a> inside <Link> or directly use <a> */}
-          <a href="mailto:aqsa@example.com" className="hover:text-gray-400" aria-label="Email">
+          <Link href="mailto:aqsa@example.com" className="hover:text-gray-400" aria-label="Email">
             <FaEnvelope size={18} />
-          </a>
-          <a href="https://twitter.com/aqsa" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+          </Link>
+          <Link href="https://twitter.com/aqsa" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
             <FaTwitter size={18} />
-          </a>
-          <a href="https://facebook.com/aqsa" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+          </Link>
+          <Link href="https://facebook.com/aqsa" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
             <FaFacebook size={18} />
-          </a>
-          <a href="https://instagram.com/aqsa" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+          </Link>
+          <Link href="https://instagram.com/aqsa" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
             <FaInstagram size={18} />
-          </a>
-          <a href="https://behance.net/aqsa" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+          </Link>
+          <Link href="https://behance.net/aqsa" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
             <FaBehance size={18} />
-          </a>
-          <a href="https://linkedin.com/in/aqsa" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+          </Link>
+          <Link href="https://linkedin.com/in/aqsa" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
             <FaLinkedin size={18} />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
