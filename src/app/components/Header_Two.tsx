@@ -1,57 +1,98 @@
-"use client";
+// "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+// import { useEffect, useState } from "react";
+// import Link from "next/link";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
+
+// export default function Header_Two() {
+//   const [position, setPosition] = useState({ x: 0, y: 0 });
+
+//   useEffect(() => {
+//     const move = (e: MouseEvent) => {
+//       setPosition({ x: e.clientX, y: e.clientY });
+//     };
+//     window.addEventListener("mousemove", move);
+//     return () => window.removeEventListener("mousemove", move);
+//   }, []);
+
+//   return (
+//     <>
+//       {/* Invert Cursor */}
+//       <motion.div
+//         className="fixed w-16 h-16 rounded-full pointer-events-none z-[9999] mix-blend-difference bg-white"
+//         animate={{
+//           x: position.x - 32,
+//           y: position.y - 32,
+//         }}
+//         transition={{ type: "spring", stiffness: 300, damping: 30 }}
+//       />
+
+//       {/* Header Section */}
+//       <header className="relative w-full  text-white overflow-hidden">
+//         <nav className="flex justify-between items-center px-10 py-6 backdrop-blur-md bg-black/40">
+//           <h1 className="text-3xl font-bold tracking-wider">Aqsa</h1>
+//           <ul className="flex gap-6 text-lg font-medium">
+//             <li className="hover:text-gray-300 transition-all duration-300">
+//               <Link href="/">Home</Link>
+//             </li>
+//             <li className="hover:text-gray-300 transition-all duration-300">
+//               <Link href="/expertise">Expertise</Link>
+//             </li>
+//             <li className="hover:text-gray-300 transition-all duration-300">
+//               <Link href="/experience">Experience</Link>
+//             </li>
+//             <li className="hover:text-gray-300 transition-all duration-300">
+//               <Link href="/about">About</Link>
+//             </li>
+//             <li className="hover:text-gray-300 transition-all duration-300">
+//               <Link href="/services">Services</Link>
+//             </li>
+//           </ul>
+//         </nav>
+//       </header>
+      
+//     </>
+//   );
+// }
+
+
+
+
+'use client';
+
+import Link from 'next/link';
 
 export default function Header_Two() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const move = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
-  }, []);
-
   return (
-    <>
-      {/* Invert Cursor */}
-      <motion.div
-        className="fixed w-16 h-16 rounded-full pointer-events-none z-[9999] mix-blend-difference bg-white"
-        animate={{
-          x: position.x - 32,
-          y: position.y - 32,
-        }}
-        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      />
-
-      {/* Header Section */}
-      <header className="relative w-full  text-white overflow-hidden">
-        <nav className="flex justify-between items-center px-10 py-6 backdrop-blur-md bg-black/40">
-          <h1 className="text-3xl font-bold tracking-wider">Aqsa</h1>
-          <ul className="flex gap-6 text-lg font-medium">
-            <li className="hover:text-gray-300 transition-all duration-300">
-              <Link href="/">Home</Link>
-            </li>
-            <li className="hover:text-gray-300 transition-all duration-300">
-              <Link href="/expertise">Expertise</Link>
-            </li>
-            <li className="hover:text-gray-300 transition-all duration-300">
-              <Link href="/experience">Experience</Link>
-            </li>
-            <li className="hover:text-gray-300 transition-all duration-300">
-              <Link href="/about">About</Link>
-            </li>
-            <li className="hover:text-gray-300 transition-all duration-300">
-              <Link href="/services">Services</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      
-    </>
+    <header className="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-4 backdrop-blur-md bg-black/40 sticky top-0 z-50">
+      <h1 className="text-xl font-bold text-white mb-2 md:mb-0">
+        <span className="text-gray-300">laura</span>
+        <span className="text-green-400">gonzález</span>
+      </h1>
+      <nav className="flex flex-wrap justify-center gap-2 md:gap-6 text-sm">
+         <Link href="/" className="text-white hover:text-green-400 transition-colors">
+  Home
+</Link>
+        <Link href="#projects" className=" text-white hover:text-green-400 transition-colors">
+          Projects
+        </Link>
+        <Link href="/experience" className="text-white hover:text-green-400 transition-colors">
+          Experience
+        </Link>
+        <Link href="/expertise" className="text-white hover:text-green-400 transition-colors">
+          Expertise
+        </Link>
+        <Link href="/services" className="text-white hover:text-green-400 transition-colors">
+          Services
+        </Link>
+        <Link href="/contact" className="text-white hover:text-green-400 transition-colors">
+          Contact
+        </Link>
+      </nav>
+    </header>
   );
 }
+
+
+
