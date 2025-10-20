@@ -1,9 +1,9 @@
 "use client";
-import { motion, Variants } from 'framer-motion';
-import React from 'react';
-import Header_Two from '../components/Header_Two';
-import { FaLaptopCode, FaDesktop, FaUserTie } from 'react-icons/fa';
-import { MdWork } from 'react-icons/md';
+import { motion, Variants } from "framer-motion";
+import React from "react";
+import { SiReact, SiNextdotjs, SiN8N } from "react-icons/si";
+import { MdWork } from "react-icons/md";
+import Header_Two from "../components/Header_Two";
 
 function Experience() {
   const containerVariants: Variants = {
@@ -12,9 +12,9 @@ function Experience() {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        when: "beforeChildren"
-      }
-    }
+        when: "beforeChildren",
+      },
+    },
   };
 
   const itemVariants: Variants = {
@@ -24,66 +24,103 @@ function Experience() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const floatingShape = (delay = 0, xMove = 30, yMove = 30) => ({
+    y: [0, yMove, 0],
+    x: [0, xMove, 0],
+    transition: {
+      duration: 10 + delay * 2,
+      ease: "easeInOut" as const,
+      repeat: Infinity,
+      delay,
+    },
+  });
+  const iconAnimation = {
+    whileHover: {
+      rotate: 360,
+      scale: 1.2,
+      transition: { duration: 1 },
+    },
   };
 
   const experiences = [
     {
-      role: "Freelance Web Developer",
+      role: "Agentic AI & Automation",
       company: "Self-Employed",
       period: "2023 - Present",
       description: [
         "Developed 20+ responsive websites using React, Next.js, and Tailwind CSS",
-        "Implemented modern UI/UX principles with Figma prototypes",
-        "Optimized websites for performance (90+ Lighthouse scores)"
+        "Integrated LLM-based solutions to streamline real-world business processes",
+        "Built intelligent workflows and AI-powered agents using n8n and automation frameworks",
       ],
-      Icon: FaLaptopCode,
-      color: "from-indigo-500/20 to-purple-500/20",
-      borderColor: "border-indigo-400/30"
+      Icon: SiReact,
+      color: "from-indigo-700/30 to-purple-700/30",
+      borderColor: "border-indigo-500/40",
+      iconColor: "text-sky-400",
     },
     {
-      role: "Frontend Developer",
+      role: "Full Stack Developer",
       company: "Tech Solutions Inc.",
       period: "2022 - 2023",
       description: [
-        "Built enterprise dashboard with TypeScript and Redux",
+        "Created multiple responsive web apps with modern front-end & back-end stacks.",
         "Collaborated with UX team to implement design systems",
-        "Reduced page load time by 40% through code optimization"
+        "Focused on clean UI/UX and scalable architecture",
       ],
-      Icon: FaDesktop,
-      color: "from-rose-500/20 to-pink-500/20",
-      borderColor: "border-rose-400/30"
+      Icon: SiNextdotjs,
+      color: "from-rose-700/30 to-pink-700/30",
+      borderColor: "border-rose-500/40",
+      iconColor: "text-rose-500",
     },
     {
-      role: "Web Development Intern",
+      role: "Automation & No-Code Intern",
       company: "Digital Agency",
       period: "2021 - 2022",
       description: [
-        "Developed WordPress themes and custom plugins",
-        "Assisted in mobile-first responsive designs",
-        "Participated in Agile development workflows"
+        "Built automated workflows using n8n and OpenAI Agent Kit",
+        "Developed intelligent agents to streamline business operations",
+        "Collaborated with team to integrate no-code solutions with web platforms",
       ],
-      Icon: FaUserTie,
-      color: "from-emerald-500/20 to-teal-500/20",
-      borderColor: "border-emerald-400/30"
-    }
+      Icon: SiN8N,
+      color: "from-emerald-700/30 to-teal-700/30",
+      borderColor: "border-emerald-500/40 bg-red-700/10",
+      iconColor: "text-indigo-500",
+    },
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen">
-      <Header_Two/>
-      
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="experience">
-        {/* Background elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-20 -left-20 w-96 h-96 bg-purple-600/10 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-indigo-600/10 rounded-full filter blur-3xl"></div>
-        </div>
+    <div className="bg-gradient-to-br from-gray-950 to-gray-900 min-h-screen relative overflow-hidden">
+      <Header_Two />
 
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative" id="experience">
+        {/* Floating Background Elements */}
+        <motion.div
+          className="absolute top-10 left-10 w-8 h-8 bg-pink-500 rounded-full opacity-60"
+          animate={floatingShape(0)}
+        />
+        <motion.div
+          className="absolute bottom-20 right-16 w-40 h-40 bg-purple-500 rounded-full opacity-60"
+          animate={floatingShape(1)}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/4 w-6 h-6 bg-blue-500 rounded-full opacity-50"
+          animate={floatingShape(2)}
+        />
+        <motion.div
+          className="absolute bottom-1/4 left-1/3 w-5 h-5 bg-pink-400 rounded-full opacity-50"
+          animate={floatingShape(1.5)}
+        />
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-40 h-40 bg-purple-400 rounded-full opacity-50"
+          animate={floatingShape(0.5)}
+        />
+
+        {/* Section Content */}
         <div className="max-w-6xl mx-auto relative z-10">
-          {/* Section Header */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -91,18 +128,27 @@ function Experience() {
             viewport={{ once: true, margin: "-100px" }}
             className="text-center mb-16 lg:mb-20"
           >
-            <motion.p variants={itemVariants} className="text-lg font-medium text-purple-400 mb-3 flex items-center justify-center gap-2">
+            <motion.p
+              variants={itemVariants}
+              className="text-lg font-medium text-purple-400 mb-3 flex items-center justify-center gap-2"
+            >
               <MdWork className="text-xl" /> Professional Journey
             </motion.p>
-            <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            <motion.h2
+              variants={itemVariants}
+              className="text-4xl md:text-5xl font-bold mb-4 text-white"
+            >
               Work Experience
             </motion.h2>
-            <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-              My career progression and key professional achievements
+            <motion.p
+              variants={itemVariants}
+              className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
+            >
+              My career growth and key milestones in building smart AI-powered
+              solutions.
             </motion.p>
           </motion.div>
 
-          {/* Experience Timeline */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -119,35 +165,46 @@ function Experience() {
                   transition={{ delay: index * 0.15 }}
                   className="relative"
                 >
-                  {/* Timeline line connector */}
                   {index !== experiences.length - 1 && (
-                    <div className={`absolute left-6 top-12 h-full w-0.5 bg-gradient-to-b ${exp.color} md:left-1/2 md:-translate-x-1/2`}></div>
+                    <div
+                      className={`absolute left-6 top-12 h-full w-0.5 bg-gradient-to-b ${exp.color} md:left-1/2 md:-translate-x-1/2`}
+                    ></div>
                   )}
 
-                  {/* Content container */}
                   <div className="flex flex-col md:flex-row md:items-center gap-6">
-                    {/* Date (mobile) */}
                     <div className="md:hidden text-sm text-gray-400 pl-14 -mb-4">
                       {exp.period}
                     </div>
 
-                    {/* Icon/dot */}
-                    <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gray-800 to-gray-900 shadow-lg border border-white/10 z-10 md:left-1/2 md:-translate-x-1/2">
-                      <Icon className={`text-xl ${exp.borderColor.replace('border', 'text').replace('/30', '')}`} />
-                    </div>
-
-                    {/* Content card */}
                     <motion.div
-                      whileHover={{ y: -5 }}
-                      className={`flex-1 p-6 rounded-xl backdrop-blur-sm bg-gradient-to-br ${exp.color} border ${exp.borderColor} transition-all duration-300 md:max-w-[45%] ${index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'}`}
+                      {...iconAnimation}
+                      className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gray-800 to-gray-900 shadow-2xl border border-white/20 z-10 md:left-1/2 md:-translate-x-1/2"
+                    >
+                      <Icon
+                        className={`text-2xl drop-shadow-lg ${exp.iconColor}`}
+                      />
+                    </motion.div>
+
+                    <motion.div
+                      whileHover={{ y: -8, scale: 1.03 }}
+                      className={`flex-1 p-6 rounded-xl backdrop-blur-sm bg-gradient-to-br ${
+                        exp.color
+                      } border ${
+                        exp.borderColor
+                      } transition-all duration-300 md:max-w-[45%] ${
+                        index % 2 === 0
+                          ? "md:mr-auto md:pr-12"
+                          : "md:ml-auto md:pl-12"
+                      }`}
                     >
                       <div className="flex flex-col gap-2 mb-4">
-                        <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                        <h3 className="text-xl font-bold text-white">
+                          {exp.role}
+                        </h3>
                         <div className="flex items-center gap-3">
-                          <span className="text-purple-300 bg-purple-900/30 px-3 py-1 rounded-full text-sm">
+                          <span className="text-purple-300 bg-purple-900/40 px-3 py-1 rounded-full text-sm">
                             {exp.company}
                           </span>
-                          {/* Date (desktop) */}
                           <span className="hidden md:inline text-gray-300 text-sm">
                             {exp.period}
                           </span>
@@ -156,8 +213,18 @@ function Experience() {
 
                       <ul className="space-y-2.5">
                         {exp.description.map((item, i) => (
-                          <li key={i} className="flex items-start text-gray-300">
-                            <span className={`text-xs mt-1.5 mr-2 ${exp.borderColor.replace('border', 'text')}`}>▹</span>
+                          <li
+                            key={i}
+                            className="flex items-start text-gray-300"
+                          >
+                            <span
+                              className={`text-xs mt-1.5 mr-2 ${exp.borderColor.replace(
+                                "border",
+                                "text"
+                              )}`}
+                            >
+                              ▹
+                            </span>
                             <span>{item}</span>
                           </li>
                         ))}
@@ -175,6 +242,3 @@ function Experience() {
 }
 
 export default Experience;
-
-
-

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { FaMapMarkerAlt, FaPhoneAlt, FaPaperPlane, FaInstagram, FaNewspaper, FaInfoCircle, FaArrowRight ,FaQuoteLeft} from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaPaperPlane, FaInstagram,  FaInfoCircle, FaArrowRight ,FaQuoteLeft} from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -45,7 +45,7 @@ const Footer = () => {
             <span>About Us</span>
           </h3>
           <p className="text-gray-300 mb-6 leading-relaxed text-xs">
-            We build digital experiences that connect, inspire, and deliver results — powered by a passionate team of designers and developers.
+            We build digital experiences that connect, inspire, and deliver results  powered by a passionate team of designers and developers.
           </p>
           <div className="space-y-3">
             <p className="flex items-center gap-3 text-gray-300 text-xs">
@@ -102,7 +102,7 @@ const Footer = () => {
         </div>
         <div>
           <p className="text-gray-300 italic text-sm">
-            "{client.feedback}"
+            {client.feedback}
           </p>
           <h4 className="font-medium text-white mt-2">{client.name}</h4>
           <p className="text-xs text-gray-400">{client.role}</p>

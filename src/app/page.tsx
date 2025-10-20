@@ -1,16 +1,19 @@
 import React from 'react'
 import Header from './components/Header'
-import ChatbotPage from './chatbot/page'
 
-function page() {
+function Home() {
   return (
-  
-  <div>
-    <Header/>
-  <ChatbotPage/>
-  </div>
+    <div>
+ 
+      <Header/>
 
+     
+
+    </div>
   )
 }
 
-export default page
+export default Home
+
+
+
