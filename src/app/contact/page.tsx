@@ -99,21 +99,12 @@ export default function Contact() {
     }
   };
 
-  // const openWhatsApp = () => {
-  //   const phoneNumber = "1234567890";
-  //   const message =
-  //     "Hello! I came across your portfolio and wanted to connect.";
-  //   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-  //     message
-  //   )}`;
-  //   window.open(url, "_blank");
-  // };
 
 
  // ✅ Window-safe WhatsApp function
   const openWhatsApp = () => {
     if (typeof window !== "undefined") {
-      const phoneNumber = "1234567890";
+      const phoneNumber = "03172813709";
       const message =
         "Hello! I came across your portfolio and wanted to connect.";
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -203,13 +194,13 @@ export default function Contact() {
                 {
                   Icon: FaMapMarkerAlt,
                   title: "Location",
-                  text: "Mumbai, India",
+                  text: "karachi, Pakistan",
                   color: "emerald",
                 },
                 {
                   Icon: FaEnvelope,
                   title: "Email",
-                  text: "contact@example.com",
+                  text: "aqsa.gull.dev.ai99@gmail.com",
                   color: "emerald",
                   link: "mailto:contact@example.com",
                 },
@@ -266,7 +257,7 @@ export default function Contact() {
 
                   <motion.a
                     {...iconAnimation}
-                    href="https://linkedin.com/in/yourprofile"
+                    href="https://www.linkedin.com/in/aqsa-gullofficial99"
                     target="_blank"
                     className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-all"
                   >
@@ -275,7 +266,7 @@ export default function Contact() {
 
                   <motion.a
                     {...iconAnimation}
-                    href="https://github.com/yourusername"
+                    href="https://github.com/Aqsagull99"
                     target="_blank"
                     className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-all"
                   >
@@ -284,7 +275,7 @@ export default function Contact() {
 
                   <motion.a
                     {...iconAnimation}
-                    href="mailto:contact@example.com"
+                    href="aqsa.gull.dev.ai99@gmail.com"
                     className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full transition-all"
                   >
                     <SiGmail className="text-xl" />
@@ -326,7 +317,7 @@ export default function Contact() {
                       id: "email",
                       label: "Email Address",
                       type: "email",
-                      placeholder: "your.email@example.com",
+                      placeholder: "user-email",
                     },
                   ].map((field) => (
                     <div key={field.id}>
@@ -430,6 +421,7 @@ export default function Contact() {
     </div>
   );
 }
+
 
 
 
