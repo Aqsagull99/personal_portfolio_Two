@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, MouseEvent, TouchEvent } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   FaArrowRight,
   FaArrowLeft,
@@ -30,56 +31,65 @@ const ProjectSection = () => {
   const dragStartX = useRef(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const projects = [
-    {
-      id: 1,
-      title: "Video Analytics Dashboard",
-      tagline: "Real-time insights for content performance tracking",
-      tech: ["React", "TypeScript", "Next.js", "Tailwind"],
-      icons: [FaReact, SiTypescript, SiNextdotjs, SiTailwindcss],
-      gradient: "bg-gradient-to-r from-purple-500 to-pink-500",
-    },
-    {
-      id: 2,
-      title: "Creator Collaboration Platform",
-      tagline: "Connect brands with top video creators worldwide",
-      tech: ["Next.js", "GraphQL", "Prisma", "AWS"],
-      icons: [SiNextdotjs, SiGraphql, SiPrisma, FaAws],
-      gradient: "bg-gradient-to-r from-blue-500 to-teal-400",
-    },
-    {
-      id: 3,
-      title: "AI Video Enhancement",
-      tagline: "Automated editing with machine learning algorithms",
-      tech: ["Python", "TensorFlow", "FastAPI", "React"],
-      icons: [FaPython, SiTensorflow, SiFastapi, FaReact],
-      gradient: "bg-gradient-to-r from-green-500 to-emerald-400",
-    },
-    {
-      id: 4,
-      title: "Content Scheduling System",
-      tagline: "Optimize posting times for maximum engagement",
-      tech: ["Node.js", "MongoDB", "Redis", "Vue.js"],
-      icons: [FaNodeJs, SiMongodb, SiRedis, SiVuedotjs],
-      gradient: "bg-gradient-to-r from-orange-500 to-red-500",
-    },
-    {
-      id: 5,
-      title: "Brand Design System",
-      tagline: "Consistent visual identity across all platforms",
-      tech: ["Figma", "React", "TypeScript", "Tailwind"],
-      icons: [FaFigma, FaReact, SiTypescript, SiTailwindcss],
-      gradient: "bg-gradient-to-r from-indigo-500 to-purple-500",
-    },
-    {
-      id: 6,
-      title: "Data Analytics Platform",
-      tagline: "Advanced analytics for content performance",
-      tech: ["Python", "MongoDB", "React", "AWS"],
-      icons: [FaPython, SiMongodb, FaReact, FaAws],
-      gradient: "bg-gradient-to-r from-cyan-500 to-blue-500",
-    },
-  ];
+ const projects = [
+  {
+    id: 1,
+    title: "Dashboard Next.js",
+    tagline: "Next.js based analytics dashboard for real-time insights",
+    tech: ["React", "TypeScript", "Next.js", "Tailwind"],
+    icons: [FaReact, SiTypescript, SiNextdotjs, SiTailwindcss],
+    image: "/projects/dashboard.jpg",
+    gradient: "bg-gradient-to-r from-purple-500 to-pink-500",
+  },
+  {
+    id: 2,
+    title: "Ecommerce - Selling Platform",
+    tagline: "A complete ecommerce solution for one-product stores",
+    tech: ["Next.js", "GraphQL", "Prisma", "AWS"],
+    icons: [SiNextdotjs, SiGraphql, SiPrisma, FaAws],
+    image: "/projects/eco-one-star.jpg",
+    gradient: "bg-gradient-to-r from-blue-500 to-teal-400",
+  },
+  {
+    id: 3,
+    title: "N8N Weather & Hacker News Workflow",
+    tagline: "Automated workflows for fetching weather and news data",
+    tech: ["Python", "TensorFlow", "FastAPI", "React"],
+    icons: [FaPython, SiTensorflow, SiFastapi, FaReact],
+    image: "/projects/n8n-weather.jpg",
+    gradient: "bg-gradient-to-r from-green-500 to-emerald-400",
+  },
+  {
+    id: 4,
+    title: "Ecommerce - Chocolate Store",
+    tagline: "Optimize chocolate product sales and inventory management",
+    tech: ["Node.js", "MongoDB", "Redis", "Vue.js"],
+    icons: [FaNodeJs, SiMongodb, SiRedis, SiVuedotjs],
+    image: "/projects/eco-two-choco.jpg",
+    gradient: "bg-gradient-to-r from-orange-500 to-red-500",
+  },
+  {
+    id: 5,
+    title: "Portfolio Next.js Diamond",
+    tagline: "Next.js based personal portfolio showcasing projects",
+    tech: ["Figma", "React", "TypeScript", "Tailwind"],
+    icons: [FaFigma, FaReact, SiTypescript, SiTailwindcss],
+    image: "/projects/portfolio-diamond.jpg",
+    gradient: "bg-gradient-to-r from-indigo-500 to-purple-500",
+  },
+  {
+    id: 6,
+    title: "Streamlit Advanced Password Manager",
+    tagline: "Secure password management system with advanced features",
+    tech: ["Python", "MongoDB", "React", "AWS"],
+    icons: [FaPython, SiMongodb, FaReact, FaAws],
+    image: "/projects/streamlit-password.jpg",
+    gradient: "bg-gradient-to-r from-cyan-500 to-blue-500",
+  },
+];
+ 
+
+
 
   // 👇 Dragging Start
   const handleDragStart = (
@@ -124,7 +134,6 @@ const ProjectSection = () => {
   const prevSlide = () =>
     currentIndex > 0 && setCurrentIndex(currentIndex - 1);
 
-  // 👇 Floating Animation Function
   const floatingShape = (delay = 0) => ({
     y: [0, -25, 0],
     x: [0, 15, 0],
@@ -212,19 +221,16 @@ const ProjectSection = () => {
                       : "border-gray-700/40"
                   } backdrop-blur-sm`}
                 >
-                  <div className={`h-36 ${project.gradient} relative`}>
-                    <div className="absolute bottom-4 left-4 flex gap-2">
-                      {project.icons.map((Icon, i) => (
-                        <motion.div
-                          key={i}
-                          whileHover={{ scale: 1.15 }}
-                          className="w-8 h-8 bg-black/30 rounded-lg flex items-center justify-center"
-                        >
-                          <Icon className="text-white text-sm" />
-                        </motion.div>
-                      ))}
-                    </div>
+                  {/* ✅ Project Image */}
+                  <div className="relative h-36 w-full">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
+
                   <div className="p-5">
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                     <p className="text-gray-300 text-sm mb-4">
