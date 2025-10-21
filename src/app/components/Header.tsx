@@ -82,10 +82,10 @@ export default function Home() {
             Experience
           </Link>
           <Link
-            href="/about"
+            href="/expertise"
             className="hover:text-green-400 transition-colors"
           >
-            About
+            Expertise
           </Link>
           <Link
             href="/services"
@@ -112,5 +112,6 @@ export default function Home() {
     </main>
   );
 }
+
 
 

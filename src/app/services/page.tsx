@@ -90,7 +90,7 @@ function Services() {
       ),
       description:
         "Build smart automation workflows using Agentic AI and tools like n8n to save time and boost productivity.",
-      image: "/undraw_responsive_csbt.svg",
+      image: "/ai.jpg",
       color: "from-emerald-500/10 to-teal-500/10",
       delay: 0.3,
     },
@@ -103,7 +103,7 @@ function Services() {
       ),
       description:
         "Make your website blazing fast with performance tuning and modern optimization techniques.",
-      image: "/undraw_speed_test_re_pe1f.svg",
+      image: "/undraw_responsive_csbt.svg",
       color: "from-amber-500/10 to-orange-500/10",
       reverse: true,
       delay: 0.4,
