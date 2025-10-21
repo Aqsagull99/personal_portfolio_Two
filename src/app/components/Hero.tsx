@@ -92,7 +92,7 @@ export default function Hero() {
             viewport={{ once: true }}
             className="text-xl md:text-2xl text-blue-400 font-light mb-6"
           >
-            Creative Web Developer & UI Enthusiast
+            Creative Web & AI Agent Developer
           </motion.h3>
 
           {/* Floating Yellow Ball */}
@@ -109,7 +109,7 @@ export default function Hero() {
             viewport={{ once: true }}
             className="text-gray-300 leading-relaxed max-w-lg mb-6"
           >
-            I&apos;m passionate about building beautiful and functional digital experiences. My work blends clean UI, smooth animations and modern technologies to bring ideas to life. Let’s create something amazing together!
+            I specialize in building intelligent digital experiences, combining cutting-edge AI agents with clean, interactive web interfaces. My work merges smart automation, smooth UI, and modern technologies to transform ideas into impactful solutions. Let’s build the future together!
           </motion.p>
 
           {/* Buttons */}

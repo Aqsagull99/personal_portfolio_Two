@@ -163,7 +163,7 @@ const ProjectSection = () => {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-              Featured Projects
+              Showcase of Excellence
             </span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
