@@ -7,6 +7,8 @@ import ProjectSection from "./Card";
 import About from "./About";
 import Hero from "./Hero";
 import ProjectShowcase from "./Project";
+import AgentChat from "./AgentChat";
+
 
 export default function Home() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -59,8 +61,8 @@ export default function Home() {
       {/* Header */}
       <header className="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-4 backdrop-blur-md bg-black/40 sticky top-0 z-50">
         <h1 className="text-xl font-bold text-white mb-2 md:mb-0">
-          <span className="text-gray-300">Future</span>
-          <span className="text-green-400">Scape</span>
+          <span className="text-gray-300">Aqsa</span>
+          <span className="text-green-400">Gull</span>
         </h1>
         <nav className="flex flex-wrap justify-center gap-2 md:gap-6 text-sm">
           <Link
@@ -107,8 +109,11 @@ export default function Home() {
       <ProjectSection /> 
       {/* Project Showcase Section */}
       <ProjectShowcase />
+      
       {/* About Section */}
       <About />  
+
+      <AgentChat/> 
     </main>
   );
 }

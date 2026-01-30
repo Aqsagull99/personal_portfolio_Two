@@ -121,13 +121,13 @@ export default function Hero() {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4 mb-10"
           >
-            <Link href="/project">
+            <Link href="/projects-demos">
               <motion.button
                 whileHover={{ scale: 1.05, backgroundColor: "#ffffff", color: "#000000" }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white px-8 py-4 rounded-full text-white hover:bg-white hover:text-black transition-all duration-300 flex items-center gap-2 font-medium"
               >
-                View My Work
+                Watch My Projects
                 <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
                   <FaArrowRight />
                 </motion.span>
