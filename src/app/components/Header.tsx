@@ -7,6 +7,7 @@ import ProjectSection from "./Card";
 import About from "./About";
 import Hero from "./Hero";
 import ProjectShowcase from "./Project";
+import RealProjects from "./RealProjects";
 import AgentChat from "./AgentChat";
 
 
@@ -109,6 +110,9 @@ export default function Home() {
       <ProjectSection /> 
       {/* Project Showcase Section */}
       <ProjectShowcase />
+
+      {/* Real World Projects Section */}
+      <RealProjects />
       
       {/* About Section */}
       <About />  
