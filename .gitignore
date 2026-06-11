@@ -35,3 +35,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 *.Zone.Identifier
+
+# python / backend
+backend/.venv
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/.env
