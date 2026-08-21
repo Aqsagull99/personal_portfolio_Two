@@ -77,7 +77,7 @@ const realProjects: Project[] = [
     ],
     image: "/Erp-softwere.PNG",
     gradient: "from-[#8B0000] to-[#D4A017]",
-    budget: "PKR 400,000",
+    budget: "$1,400",
   },
   {
     id: 1,
