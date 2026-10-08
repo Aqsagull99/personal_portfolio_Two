@@ -91,7 +91,7 @@ const floatingShape = (delay = 0) => ({
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Discover how our expert content creators can propel your business forward with stunning video solutions
+            Web apps, dashboards and AI automations I design and build end to end
           </p>
         </div>
 

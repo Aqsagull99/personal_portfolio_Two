@@ -199,9 +199,9 @@ function About() {
               transition={{ type: "spring", stiffness: 200, delay: 1.8 }}
               viewport={{ once: true }}
             >
-              100K+
+              9+
             </motion.div>
-            <div className="text-gray-400 text-sm">Happy Creators</div>
+            <div className="text-gray-400 text-sm">Projects Built</div>
           </div>
           <div className="text-center">
             <motion.div 
@@ -223,9 +223,9 @@ function About() {
               transition={{ type: "spring", stiffness: 200, delay: 2.2 }}
               viewport={{ once: true }}
             >
-              1M+
+              3
             </motion.div>
-            <div className="text-gray-400 text-sm">Videos Created</div>
+            <div className="text-gray-400 text-sm">Client Projects Delivered</div>
           </div>
         </motion.div>
       </motion.div>

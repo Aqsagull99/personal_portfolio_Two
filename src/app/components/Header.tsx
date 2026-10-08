@@ -8,7 +8,7 @@ import About from "./About";
 import Hero from "./Hero";
 import ProjectShowcase from "./Project";
 import RealProjects from "./RealProjects";
-import AgentChat from "./AgentChat";
+// import AgentChat from "./AgentChat"; // disabled until API credits are restored
 
 
 export default function Home() {
@@ -117,7 +117,7 @@ export default function Home() {
       {/* About Section */}
       <About />  
 
-      <AgentChat/> 
+      {/* <AgentChat/> */}
     </main>
   );
 }
